@@ -1,0 +1,113 @@
+[{
+    "layer": "top",
+    "output": "DP-1",
+    "position": "top",
+    "height": "20",
+    "spacing": 4,
+    "modules-left": ["custom/launcher", "wlr/workspaces", "tray"],
+    "modules-center": ["custom/weather", "clock", "custom/roomtemp"],
+    "modules-right": ["temperature", "cpu", "memory", "disk", "network", "pulseaudio", "wireplumber", "custom/logout"],
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "wofi --show drun -I -W 750 -H 400",
+        "tooltip": false
+    },
+    "wlr/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/get_weather.sh",
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 600
+    },
+    "clock": {
+        "format": "{:%a %d  %H:%M}",
+        "format-alt": "{:%d.%m.%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+    "custom/roomtemp": {
+        "exec": "~/.config/waybar/scripts/get_roomtemp.sh",
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 10
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "tooltip-format": "CPU Temp: {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 10
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "format-alt": " {avg_frequency} GHz",
+        "interval": 10
+    },
+    "memory": {
+        "format": " {}%",
+        "format-alt": " {used}/{total} GiB",
+        "tooltip-format": " {swapUsed} GiB",
+        "interval": 10
+    },
+    "disk": {
+        "format": " {percentage_used}%",
+        "tooltip-format": "Used:\t{used}/{total}\nFree:\t{free}",
+        "path": "/",
+        "interval": 60
+    },
+    "network": {
+        "format-ethernet": " {bandwidthTotalBytes}",
+        "tooltip-format-ethernet": "{ifname}:\nIP Address: \t{ipaddr}/{cidr}\nGateway: \t{gwaddr}\nDownload: \t{bandwidthDownBytes}\nUpload: \t\t{bandwidthUpBytes}",
+        "format-disconnected": " {ifname}",
+        "tooltip-format-disconnected": " Disconnected",
+        "format-wifi": "{icon} {essid}",
+        "tooltip-format-wifi": "{frequency} MHz {signaldBm} dBm",
+        "format-linked": "{ifname} (No IP) ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "tooltip": true,
+        "interval": 10
+    },
+    "pulseaudio": {
+    	"format": "{format_source}",
+    	"format-source": "",
+    	"format-source-muted": "",
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰸈 00%",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "max-volume": 150,
+        "scroll-step": 0.5
+    },
+    "custom/logout": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+},{
+    "layer": "top",
+    "position": "top",
+    "output": ["DP-2", "HDMI-A-1"],
+    "modules-center": ["wlr/workspaces"], 
+    "wlr/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    }
+}]
+

@@ -1,0 +1,80 @@
+* {
+  font-family: Arimo Nerd Font Propo, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #272727;
+}
+
+#custom-launcher {
+  color: #BEAEF2;
+  background-color: #272727;
+  border-radius: 0px 20px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0 20px 0 13px;
+  font-size: 20px;
+}
+
+#custom-launcher button:hover {
+  background-color: #303030;
+}
+
+#clock {
+  color: #BEAEF2;
+  background-color: #272727;
+  border-radius: 20px 20px 0px 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+#custom-logout {
+  color: #BEAEF2;
+  background-color: #272727;
+  border-radius: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0 13px 0px 20px;
+  font-size: 20px;
+}
+
+#workspaces {
+  background-color: #272727;
+  margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 16px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  border-radius: 16px;
+  color: #8c8c8c;
+}
+
+#workspaces button.active {
+  color: #dcdcff;
+  background-color: transparent;
+  border-radius: 16px;
+}
+
+#workspaces button:hover {
+  background-color: #1793D1;
+  color: black;
+  border-radius: 16px;
+}
+
+#custom-weather, #custom-roomtemp, #tray, #temperature, #cpu, #memory, #disk, #network, #pulseaudio, #wireplumber {
+  background-color: transparent;
+  color: #dcdcff;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 8px;
+}
