@@ -5,14 +5,13 @@
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid #272727;
+  background-color: transparent;
 }
 
 #custom-launcher {
   color: #BEAEF2;
   background-color: #272727;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 0px 20px 0px;
   margin: 0px 0px 0px 0px;
   padding: 0 20px 0 13px;
   font-size: 20px;
@@ -25,7 +24,7 @@ window#waybar {
 #clock {
   color: #BEAEF2;
   background-color: #272727;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 0px 0px 20px 20px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 10px;
@@ -38,7 +37,7 @@ window#waybar {
 #custom-logout {
   color: #BEAEF2;
   background-color: #272727;
-  border-radius: 20px 0px 0px 0px;
+  border-radius: 0px 0px 0px 20px;
   margin: 0px 0px 0px 0px;
   padding: 0 13px 0px 20px;
   font-size: 20px;
