@@ -5,3 +5,9 @@
 
 ## Showcase
 ![Screenshot](/assets/screenshot.png?raw=true)
+
+## Other branches
+[laptop ](https://github.com/martin-coding/dotfiles/tree/laptop)
+```ocaml
+ ✨ sway / scifi / catppuccin ✨
+```
