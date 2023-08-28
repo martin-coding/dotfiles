@@ -11,3 +11,4 @@
 ```ocaml
  ✨ sway / scifi / catppuccin ✨
 ```
+![Screenshot](https://github.com/martin-coding/dotfiles/blob/laptop/assets/laptop.png?raw=true)
