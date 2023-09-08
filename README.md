@@ -8,6 +8,7 @@
 ### Other
 * **Font** • [Nerd Font](https://www.nerdfonts.com/font-downloads) JetBrainsMono Nerd Font 
 * **Wallpaper** • [Quentin Mabille](https://cdna.artstation.com/p/assets/images/images/060/317/110/4k/quentin-mabille-closeup-v2.jpg)
+* **Color scheme** • [Catppuccin](https://github.com/catppuccin/catppuccin) Catppuccin Mocha
 ## Showcase
 ![Screenshot](/assets/laptop.png?raw=true)
 
