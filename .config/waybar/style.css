@@ -1,0 +1,111 @@
+@import "mocha.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 15px;
+    border: none; /* No effect? */
+    border-radius: 0;
+}
+
+window#waybar {
+    background: @base;
+    color: @text;
+    border-radius: 20px 20px 20px 20px;
+}
+
+tooltip {
+  background: @base;
+  border: 1px solid @overlay0;
+}
+
+tooltip label {
+  color: @text;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: @text;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: @surface0;
+    border-bottom: 3px solid @text;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#custom-launcher, #custom-logout {
+    font-size: 28px;
+    color: @blue;
+    padding: 3px 11px 3px 0px;
+}
+
+#custom-launcher {
+    margin: 0px 10px 0px 20px;
+}
+
+#custom-logout {
+    margin: 0px 20px 0px 10px;
+}
+
+#workspaces, #scratchpad, #mode, #tray {
+    margin-left: 10px;
+}
+
+#idle_inhibitor, #cpu, #memory, #disk, #temperature, #bluetooth, #network, #pulseaudio, #backlight, #battery {
+    background-color: @crust;
+    padding: 0px 7px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#bluetooth {
+  border-radius: 10px 0px 0px 10px;
+  padding-right: 5px;
+  margin-right: 0px;
+}
+
+#network {
+  border-radius: 0px 10px 10px 0px;
+  padding-left: 5px;
+  margin-left: 0px;
+}
+
+#backlight {
+    border-radius: 10px 0px 0px 10px;
+    padding-right: 2px;
+    margin-right: 0px;
+}
+
+#battery {
+    border-radius: 0px 10px 10px 0px;
+    padding-left: 2px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+#battery.warning {
+  color: @red;
+}
+
+@keyframes blink {
+    to {
+        color: #f53c3c;
+    }
+}
+
+#battery.critical {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#temperature.critical {
+    color: @red;
+}
